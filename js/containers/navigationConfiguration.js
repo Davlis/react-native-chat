@@ -39,7 +39,9 @@ const tabBarConfiguration = {
   },
   lazy: true,
   tabBarPosition: 'bottom',
-  swipeEnabled: false
+  swipeEnabled: false,
+  lazyLoad: true,
+  animationEnabled: false,
 };
 
 export const TabBar = TabNavigator(routeConfiguration, tabBarConfiguration);
