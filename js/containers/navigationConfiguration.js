@@ -1,6 +1,7 @@
 import { TabNavigator } from 'react-navigation';
 
 import TabMainNavigation from './main/TabMainNavigation';
+import TabRoomsNavigation from './rooms/TabRoomsNavigation'
 
 import { Platform } from 'react-native';
 
@@ -8,6 +9,7 @@ import { darkTheme } from '../styles';
 
 const routeConfiguration = {
   TabMainNavigation: { screen: TabMainNavigation },
+  TabRoomsNavigation: { screen: TabRoomsNavigation },
 };
 
 const tabBarConfiguration = {

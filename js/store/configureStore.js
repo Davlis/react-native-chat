@@ -15,15 +15,13 @@ export default function configureStore(onComplete) {
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
 
-  persistStore(
-    store,
-    {
-      storage: AsyncStorage,
-      blacklist: [
-      ]
-    },
-    onComplete
-  );
+  if (typeof self === 'object') {
+    persistStore(store, {
+      storage: AsyncStorage
+    }, onComplete);
+  } else {
+    setTimeout(() => onComplete(), 0);
+  }
 
   return store;
 }

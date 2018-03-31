@@ -2,16 +2,17 @@ import {
   Platform, 
   StyleSheet, 
   Text,
-  View,
-  Button,
+  View 
 } from 'react-native';
 import React, { Component } from 'react';
 import { darkTheme } from '../../styles';
 
-export default class MainContainer extends Component {
+import { Button } from 'react-native';
+
+export default class RoomsContainer extends Component {
 
   static navigationOptions = () => ({
-    title: 'Home'.toUpperCase(),
+    title: 'Rooms'.toUpperCase(),
     headerTitleStyle: { color: darkTheme.headerTitle },
     headerStyle: {
       backgroundColor: darkTheme.headerBackground
@@ -22,29 +23,25 @@ export default class MainContainer extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to Diffuse!
+          Welcome to React Native!
         </Text>
         <Text style={styles.instructions}>
-          To get started, simply pick username
+          To get started, edit App.jsss
         </Text>
         <Text style={styles.instructions}>
-          Enjoy your time
+          {instructions}
         </Text>
-        <Button
-          onPress={() => this.onPress()}
-          title="Learn More"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
-
       </View>
     );
   }
-
-  onPress() {
-    this.props.navigation.navigate('MainContainer');
-  }
 }
+
+const instructions = Platform.select({
+  ios: 'Press Cmd+R to reload,\n' +
+    'Cmd+D or shake for dev menu',
+  android: 'Double tap R on your keyboard to reload,\n' +
+    'Shake or press menu button for dev menu',
+});
 
 const styles = StyleSheet.create({
   container: {
