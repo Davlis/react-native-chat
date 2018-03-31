@@ -14,8 +14,11 @@ const stackNavigatorConfiguration = {
   },
   gesturesEnabled: true,
   cardStyle: {
-    backgroundColor: darkTheme.headerBackground
-  }
+    flex: 1,
+    flexDirection: 'column'
+  },
+  headerMode: 'none',
+  mode: 'card',
 };
 
 export const NavigatorTabMain = StackNavigator(
