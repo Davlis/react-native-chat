@@ -11,13 +11,16 @@ import ScrollableTabView, {
 } from 'react-native-scrollable-tab-view';
 import { darkTheme } from '../../styles';
 
+
 export default class MainContainer extends Component {
 
   static navigationOptions = () => ({
     title: 'Home'.toUpperCase(),
     headerTitleStyle: { color: darkTheme.headerTitle },
     headerStyle: {
-      backgroundColor: darkTheme.headerBackground
+      backgroundColor: darkTheme.headerBackground,
+      borderBottomColor: darkTheme.tabBarOutline,
+      borderBottomWidth: 0.5
     }
   });
 

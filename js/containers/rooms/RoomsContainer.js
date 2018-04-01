@@ -15,7 +15,9 @@ export default class RoomsContainer extends Component {
     title: 'Rooms'.toUpperCase(),
     headerTitleStyle: { color: darkTheme.headerTitle },
     headerStyle: {
-      backgroundColor: darkTheme.headerBackground
+      backgroundColor: darkTheme.headerBackground,
+      borderBottomColor: darkTheme.tabBarOutline,
+      borderBottomWidth: 0.5
     }
   });
 

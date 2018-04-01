@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { addNavigationHelpers } from 'react-navigation';
 import { NavigatorTabMain } from './navigationConfiguration';
 import { connect } from 'react-redux';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { bindActionCreators } from 'redux';
 
 class TabMainNavigation extends Component {
   static navigationOptions = {
-    tabBarLabel: 'Home'
+    tabBarLabel: 'Home',
+    tabBarIcon: ({ tintColor }) => (
+      <Icon size={20} name={'home'} color={tintColor} />
+    )
   };
 
   render() {
